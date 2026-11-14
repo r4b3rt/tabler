@@ -1,0 +1,23 @@
+{
+  "version": "1.7.4",
+  "algorithm": "sha384",
+  "files": {
+    "dist/css/tabler.min.css": "sha384-+YtspJF2L+4VLu1yrWfgSSmCUujhd1W+ji1C5TxKZeErkdVQQVTgKFBXiMcDf7VO",
+    "dist/css/tabler.rtl.min.css": "sha384-DSfBxDz+UsBgT9q8/NQrlOqK2sScFO1Qca0gRxtsqlXST6TZ8tQcXFFFVAEgDf5W",
+    "dist/js/tabler.min.js": "sha384-kpYFZpKE7QEV4IYuIatS6xC/fQcrKph3wb7YPoOznHj5g5Kwa+RhX+/zrGUmm9k/",
+    "dist/js/tabler-theme.min.js": "sha384-DCnjMqyVquws2nApOXMdhCULlrYpZQz8xsjgf8zoMBS/QAl9PtIUdiKbU7cdFLd4",
+    "dist/js/tabler-map.min.js": "sha384-7PrzwR9wIRfeows5V8BGgfbi3+fdm71/W9OaKDjixpvKw4F3hW/IJy2fHYYa7vLo",
+    "dist/css/tabler-flags.min.css": "sha384-dY8vZEpxhN02an00T8773o04+plkVOIEUZloG9zwuUB6gZQwuu/mt0qWuB6dWqHG",
+    "dist/css/tabler-flags.rtl.min.css": "sha384-Zmdr7u+88hKNp0EcDBt3JLuV0C3M+LOoT34uk4Z/V7xCU74pir/OmvcRnxcqiP8T",
+    "dist/css/tabler-socials.min.css": "sha384-wuIRnBZbEcL0y9JKgWjvnUFvOYLUaIQY+G+VGfxneqIG1xMNNrD4KBRYTAwZENio",
+    "dist/css/tabler-socials.rtl.min.css": "sha384-Hj68x03qWuHc9FcR0ZMY1aNyoIJxDZwvGqttdSiPV5eCqo9TaD9za00N7rSlTWQV",
+    "dist/css/tabler-payments.min.css": "sha384-yDlh5FgDFrqhKXTB412mG644Csm0D4r5WW0j509qIlKwTADElrfS7YOhWQdovgc+",
+    "dist/css/tabler-payments.rtl.min.css": "sha384-PlKoSfElqPsmF81+thPyOuVk0+ew8xre6eS4JpCEbi+hHT4kffKcts/9x8kqSBPW",
+    "dist/css/tabler-vendors.min.css": "sha384-QAOuEpwoYakjwLx6UJI2sLUMIqZ9WSpCBtSApcKqnjJYl4gE2gYk9Y8Fc4UR169c",
+    "dist/css/tabler-vendors.rtl.min.css": "sha384-uRnHoLFBGrvMM7ZIWa+5cT/0aYC8CPVpASenRihZchhQqqLc0axvbhRGumoFTr2Q",
+    "dist/css/tabler-marketing.min.css": "sha384-U0uIpkKdjW7nTirHnmTdKJrFuObmjeJsRvSBuynPlVNClzHlQmWtWTRuYlJSYoT/",
+    "dist/css/tabler-marketing.rtl.min.css": "sha384-QjcAtjjS7Za6mjxBYjQukYQA7Ay7ByA6MtMU5xk3ngxnCwNBSTZp7ZiV1zBuBDnk",
+    "dist/css/tabler-themes.min.css": "sha384-TT7v1wK7viIdAgq7kvQR/ZrBnEdNk6LEMwkH2VsjmpjryV2LHIKewMj/eeNZtiY/",
+    "dist/css/tabler-themes.rtl.min.css": "sha384-RoTFJmUmSDSSVC148vs5ne/zm1TBRaQCA8oGZvbH1tXPEDGCuehrgcgV9axNP8DE"
+  }
+}

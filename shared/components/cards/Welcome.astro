@@ -1,0 +1,46 @@
+---
+import Subheader from '@ui/Subheader.astro'
+import Trending from '@ui/Trending.astro'
+import Progress from '@ui/Progress.astro'
+import Illustration from '@ui/Illustration.astro'
+---
+
+<div class="card card-gradient">
+  <div class="card-body">
+    <div class="row gy-3">
+      <div class="col-12 col-sm-6 d-flex flex-column">
+        <h2 class="h2">Welcome back, Paweł</h2>
+        <p class="text-secondary">You have 5 new messages and 2 new notifications.</p>
+
+        <div class="row g-5 mt-auto">
+          <div class="col-auto">
+            <Subheader>Today's Sales</Subheader>
+            <div class="d-flex align-items-baseline">
+              <div class="h3 me-2">6,782</div>
+              <div class="me-auto">
+                <Trending value={7} />
+              </div>
+            </div>
+            <Progress value={75} color="success" size="sm" />
+          </div>
+
+          <div class="col-auto">
+            <Subheader>Growth Rate</Subheader>
+            <div class="d-flex align-items-baseline">
+              <div class="h3 me-2">78,4%</div>
+              <div class="me-auto">
+                <Trending value={-1} />
+              </div>
+            </div>
+            <Progress value={78} color="danger" size="sm" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 d-flex justify-content-center">
+        <a href="./illustrations.html" aria-label="Illustrations">
+          <Illustration image="good-info" height={200} />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

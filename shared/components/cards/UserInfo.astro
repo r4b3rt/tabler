@@ -1,0 +1,37 @@
+---
+import IconList from '@ui/IconList.astro'
+import IconListItem from '@ui/IconListItem.astro'
+import type { FlagCountry } from '@shared/lib/tokens'
+import { people } from '@shared/lib/people'
+import Flag from '@ui/Flag.astro'
+import { requireIndex } from '@shared/lib/array'
+import CardTitle from '@ui/CardTitle.astro'
+
+const person = requireIndex(people, 24)
+---
+
+<div class="card">
+  <div class="card-body">
+    <CardTitle>Basic info</CardTitle>
+    <IconList>
+      <IconListItem icon="book">
+        <span>Went to: <strong>{person.university}</strong></span>
+      </IconListItem>
+      <IconListItem icon="briefcase">
+        <span>Worked at: <strong>{person.company}</strong></span>
+      </IconListItem>
+      <IconListItem icon="home">
+        <span>Lives in: <strong>{person.city}, {person.country}</strong></span>
+      </IconListItem>
+      <IconListItem icon="map-pin">
+        <span>From: <strong><Flag size="xs" flag={(person.country_code ?? '') as FlagCountry} /> {person.country}</strong></span>
+      </IconListItem>
+      <IconListItem icon="calendar">
+        <span>Birth date: <strong>{person.birth_date}</strong></span>
+      </IconListItem>
+      <IconListItem icon="clock">
+        <span>Time zone: <strong>{person.time_zone}</strong></span>
+      </IconListItem>
+    </IconList>
+  </div>
+</div>

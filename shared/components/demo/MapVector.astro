@@ -1,0 +1,50 @@
+---
+import mapsVector from '@data/maps-vector.json'
+
+interface MapData {
+  title?: string
+  map: string
+  color?: string
+  zoom?: boolean
+  colors?: string[]
+  legend?: boolean
+  select?: 'single' | 'multiple'
+  selected?: string[]
+  values?: Record<string, number>
+  markers?: { name: string; lat: number; lng: number }[]
+  lines?: { from: string; to: string }[]
+}
+
+interface Props {
+  mapId: string
+  color?: string
+  /** the scale as a bar under the map; defaults to what the map data says */
+  legend?: boolean
+}
+
+const { mapId, color: colorProp, legend: legendProp } = Astro.props
+
+const data = (mapsVector as Record<string, MapData>)[mapId]
+const color = colorProp ?? data?.color ?? 'primary'
+const legend = legendProp ?? data?.legend ?? false
+---
+
+{
+  data && (
+    <div
+      class="vector-map"
+      data-bs-toggle="vector-map"
+      data-bs-map={data.map}
+      data-bs-label={data.title}
+      data-bs-zoom={data.zoom ? 'true' : undefined}
+      data-bs-legend={legend ? 'true' : undefined}
+      data-bs-select={data.select}
+      data-bs-selected={data.selected && JSON.stringify(data.selected)}
+      data-bs-colors={data.colors && JSON.stringify(data.colors)}
+      data-bs-values={data.values && JSON.stringify(data.values)}
+      data-bs-markers={data.markers && JSON.stringify(data.markers)}
+      data-bs-lines={data.lines && JSON.stringify(data.lines)}
+      style={color === 'primary' ? undefined : `--tblr-vector-map-color: var(--tblr-${color})`}
+    />
+  )
+}

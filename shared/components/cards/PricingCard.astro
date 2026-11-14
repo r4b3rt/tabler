@@ -1,0 +1,57 @@
+---
+// Feature names are a fixed list; the `features` string is split per-character into a 1/0 availability mask.
+import Icon from '@ui/Icon.astro'
+import IconList from '@ui/IconList.astro'
+import IconListItem from '@ui/IconListItem.astro'
+
+interface Props {
+  price?: string
+  users?: string | number
+  category?: string
+  features?: string
+  /** ribbon + button color, e.g. "green" */
+  featuredColor?: string
+}
+
+const { price = '79', users = 10, category = 'Enterprise', features = '1000', featuredColor } = Astro.props
+
+const featureNames = ['Sharing Tools', 'Design Tools', 'Private Messages', 'Twitter API']
+const availableFeatures = features.split('')
+---
+
+<div class="card card-md">
+  {
+    featuredColor && (
+      <div class={`ribbon ribbon-top ribbon-bookmark bg-${featuredColor}`}>
+        <Icon name="star" />
+      </div>
+    )
+  }
+
+  <div class="card-body text-center">
+    <div class="text-uppercase text-secondary fw-medium">{category}</div>
+
+    <div class="display-5 fw-bold my-3">${price}</div>
+
+    <IconList class="align-items-center">
+      <IconListItem icon="users">
+        <span><strong>{users}</strong> Users</span>
+      </IconListItem>
+      {
+        featureNames.map((feature, i) =>
+          availableFeatures[i] === '1' ? (
+            <IconListItem color="success">{feature}</IconListItem>
+          ) : (
+            <IconListItem icon="x" color="danger">
+              {feature}
+            </IconListItem>
+          ),
+        )
+      }
+    </IconList>
+
+    <div class="text-center mt-4">
+      <a href="#" class={`btn${featuredColor ? ` btn-${featuredColor}` : ''} w-100`}>Choose plan</a>
+    </div>
+  </div>
+</div>

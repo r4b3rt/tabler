@@ -1,0 +1,64 @@
+---
+import IconList from '@ui/IconList.astro'
+import IconListItem from '@ui/IconListItem.astro'
+
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
+
+const sectionClass = ['section', className]
+
+const features = ['Up to 5 developers', 'All marketing + app components', 'Figma UI Kit', 'Lifetime free updates']
+---
+
+<section class:list={sectionClass}>
+  <div class="container">
+    <div class="pricing">
+      <div class="pricing-card">
+        <h2 class="pricing-title">Free</h2>
+        <div class="pricing-price">
+          <span class="pricing-price-currency">$</span>99
+          <div class="pricing-price-description">
+            <div>per user</div>
+            <div>per year</div>
+          </div>
+        </div>
+        <IconList color="green" class="my-5">
+          {features.map((text) => <IconListItem>{text}</IconListItem>)}
+        </IconList>
+        <div class="pricing-btn"><a href="#" class="btn w-100">Get started</a></div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-label"><div class="badge bg-primary text-primary-fg">Popular</div></div>
+        <h2 class="pricing-title">All features</h2>
+        <div class="pricing-price">
+          <span class="pricing-price-currency">$</span>199
+          <div class="pricing-price-description">
+            <div>per user</div>
+            <div>per year</div>
+          </div>
+        </div>
+        <IconList color="green" class="my-5">
+          {features.map((text) => <IconListItem>{text}</IconListItem>)}
+        </IconList>
+        <div class="pricing-btn"><a href="#" class="btn w-100 btn-primary">Get started</a></div>
+      </div>
+      <div class="pricing-card">
+        <h2 class="pricing-title">Other</h2>
+        <div class="pricing-price">
+          <span class="pricing-price-currency">$</span>99
+          <div class="pricing-price-description">
+            <div>per user</div>
+            <div>per year</div>
+          </div>
+        </div>
+        <IconList color="green" class="my-5">
+          {features.map((text) => <IconListItem>{text}</IconListItem>)}
+        </IconList>
+        <div class="pricing-btn"><a href="#" class="btn w-100">Get started</a></div>
+      </div>
+    </div>
+  </div>
+</section>
